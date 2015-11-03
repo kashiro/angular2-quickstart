@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title></title>
+  <script src="../node_modules/systemjs/dist/system.src.js"></script>
+  <script src="../node_modules/angular2/bundles/angular2.dev.js"></script>
+  <script>
+    // https://github.com/systemjs/systemjs/blob/master/docs/config-api.md#packages
+    // 自分が作成したアプリは import { ${something} } from './app/xxxx' と読むことを定義する
+    System.config({
+      packages: {'app': {defaultExtension: 'js'}}
+    });
+    System.import('app/app');
+  </script>
+</head>
+<body>
+  <my-app>loading...</my-app>
+</body>
+</html>
